@@ -13,6 +13,10 @@
 ```html
  <script src="js/timeline.js"></script>
 ```
+-Add in your HTML file
+```html
+<timeline></timeline>
+```
 ###View
 [Links]https://github.com/pminkevich/MyTimelineVue/blob/master/example.html
 [Links]https://pminkevich.github.io/MyCV/
