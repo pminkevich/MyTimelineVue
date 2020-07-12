@@ -1,21 +1,21 @@
 
 Vue.component('timeline',{
 
-template:'<div class="timeline" >'+
-'<br>'+
-   '<div  v-if="windowEnable" class="windowBox"><div class="closeButton btn btn-dark btn-sm float-right">x</div>{{windowContent}}</div>'+
-'<ul >'+
-    '<li v-on:mouseleave="windowClose()" v-on:mouseover="windowOpen(index)" v-for="(items, index) in timeline"   class="timeitems" >'+
-    '<hr><p ><strong>{{items.tittle}}</strong></p> '+
-    '</li>'+
+template:`<div class="timeline" >
+<br>
+   <div  v-if="windowEnable" class="windowBox"><div class="closeButton btn btn-dark btn-sm float-right">x</div>{{windowContent}}</div>
+<ul >
+    <li v-on:mouseleave="windowClose()" v-on:mouseover="windowOpen(index)" v-for="(items, index) in timeline"   class="timeitems" >
+    <hr><p ><strong>{{items.tittle}}</strong></p> 
+    </li>
     
-'</ul>'+
+</ul>
 
-'<br>'+
+<br>
 
-'<br>'+
+<br>
 
-'</div>',
+</div>`,
 data: function(){
     return {
         windowEnable:false,

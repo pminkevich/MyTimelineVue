@@ -16,12 +16,10 @@ html,body{
 } 
 header{
     padding-top: 10px;
-    padding-bottom: 40%;
+    padding-bottom: 20%;
     
 }
 footer{
+    padding-top: 0.5%;
+   }
 
-    
-    padding-top: 30%;
-   
-}
