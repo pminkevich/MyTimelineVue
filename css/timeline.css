@@ -20,8 +20,9 @@
         }
         .timeline li{
 
-            font-size: 12px;
+            font-size: 15px;
             transform: rotate(-75deg);
+            padding-right: 3px;
             /* list-style-image: url("/asset/timeline/mobile.png"); */
         
             }
