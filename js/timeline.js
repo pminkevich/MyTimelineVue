@@ -3,9 +3,9 @@ Vue.component('timeline',{
 
 template:`<div class="timeline" >
 <br>
-   <div  v-if="windowEnable" class="windowBox"><div class="closeButton btn btn-dark btn-sm float-right">x</div>{{windowContent}}</div>
+   <div  v-if="windowEnable" class="windowBox"><div v-on:click="windowClose()" class="closeButton btn btn-dark btn-sm float-right">x</div><div v-html="windowContent"></div></div>
 <ul >
-    <li v-on:mouseleave="windowClose()" v-on:mouseover="windowOpen(index)" v-for="(items, index) in timeline"   class="timeitems" >
+    <li  v-on:mouseover="windowOpen(index)" v-for="(items, index) in timeline"   class="timeitems" >
     <hr><p ><strong>{{items.tittle}}</strong></p> 
     </li>
     
@@ -18,6 +18,7 @@ template:`<div class="timeline" >
 </div>`,
 data: function(){
     return {
+        windowContent:'',
         windowEnable:false,
         timeline:[
             {
@@ -26,7 +27,7 @@ data: function(){
             },
             {
             tittle:'Title 2', 
-            content:'Content Two'
+            content:'Content Two<br><a href="https://www.google.com.ar" target="_blank">Link</a>'
             },
             {
                 tittle:'Title 3', 
@@ -46,7 +47,7 @@ data: function(){
             },
             {
                 tittle:'Title 7', 
-                content:'Content Seven'
+                content:'Content Seven<br><a href="https://www.google.com.ar" target="_blank">Link</a>'
             }
         ],
     }
